@@ -1,0 +1,9 @@
+> python==3.10.8
+
+flask
+mysql-connector-python
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.2.2
+pillow
+tensorflow==2.15.0

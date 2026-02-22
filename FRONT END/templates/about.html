@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}" style="color: yellow; padding-left: 40px;">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('register')}}" style="color: white; padding-left: 40px;">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('login')}}" style="color: white; padding-left: 40px;">Login</a>
+        </li>
+    </ul>
+{% endblock %}
+               
+
+{% block content %}
+    <div class="banner_section layout_padding" style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: rgba(0, 0, 0, 0.575);">
+        <div class="container">
+            <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="banner_taital_main text-center" style="margin-top: -110px;">
+                            
+                            <h1 class="banner_taital" style="color: white;">About!</h1>
+                            <p class="banner_text" style="color: white; text-align: justify; padding: 30px;">
+                                Diabetic Retinopathy (DR) is a human eye disease that occurs in diabetics and causes retinal damage, which can lead to blindness in the long run. DR is currently being manually screened by ophthalmologists, which is a time-consuming procedure. And from now on, this task (project) will concentrate on analysing various DR stages using Deep Learning (DL), a subset of Artificial Intelligence (AI). We trained a model called MobileNet on a massive dataset of 3662 train images to detect the DR stage and classify them into high resolution fundus images. Kaggle hosts the dataset that we are using (APTOS). There are five DR stages: zero, one, two, three, and four. In this paper, fundus eye images from patients are used as input parameters. A trained model will then extract features from fundus images of the eye, and an activation function will provide the output. This architecture detected DR with an accuracy of 0.9611 (quadratic weighted kappa score of 0.8981). Finally, we compare the two MobileNet architectures
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
